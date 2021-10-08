@@ -24,11 +24,6 @@ export function HomePage() {
               demais projetos do monorepo, agnóstico a framework
             </p>
             <shared-button></shared-button>
-            {/* Lib NPM Compartilhada */}
-            <p className="home-page__box--description mt-4">
-              3. Esta é uma lib NPM <strong>compartilhada</strong> com os demais
-              projetos do monorepo
-            </p>
           </div>
         </div>
       </div>
