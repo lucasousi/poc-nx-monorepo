@@ -56,7 +56,7 @@
       "projectType": "application",
       "root": "apps/frontend-a",
       "sourceRoot": "apps/frontend-a/src",
-      "prefix": "poc-nx-monorepo",
+      "prefix": "primavera",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -155,7 +155,7 @@
       "projectType": "library",
       "root": "libs/frontend-a/components/private-button",
       "sourceRoot": "libs/frontend-a/components/private-button/src",
-      "prefix": "poc-nx-monorepo",
+      "prefix": "primavera",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -206,7 +206,7 @@
       "projectType": "library",
       "root": "libs/frontend-a/home-page",
       "sourceRoot": "libs/frontend-a/home-page/src",
-      "prefix": "poc-nx-monorepo",
+      "prefix": "primavera",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
@@ -304,6 +304,30 @@
         }
       }
     },
+    "frontend-b-components-private-button": {
+      "root": "libs/frontend-b/components/private-button",
+      "sourceRoot": "libs/frontend-b/components/private-button/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend-b/components/private-button/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend-b/components/private-button"],
+          "options": {
+            "jestConfig": "libs/frontend-b/components/private-button/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "frontend-b-e2e": {
       "root": "apps/frontend-b-e2e",
       "sourceRoot": "apps/frontend-b-e2e/src",
@@ -326,6 +350,30 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/frontend-b-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "frontend-b-routes-home-page": {
+      "root": "libs/frontend-b/routes/home-page",
+      "sourceRoot": "libs/frontend-b/routes/home-page/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend-b/routes/home-page/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend-b/routes/home-page"],
+          "options": {
+            "jestConfig": "libs/frontend-b/routes/home-page/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

@@ -2,7 +2,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomePageComponent } from './home-page.component';
 import { RouterModule } from '@angular/router';
-import { PrivateButtonModule } from '@primavera/frontend-a/components/private-button';
+import { PrivateButtonModule } from '../../../../components/private-button/src';
 
 @NgModule({
   imports: [

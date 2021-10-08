@@ -4,6 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
+    "dep-graph": "nx dep-graph",
+    "frontend-a": "nx serve frontend-a",
+    "frontend-b": "nx serve frontend-b --port 4201",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main",
     "start": "nx serve",
     "build": "nx build",

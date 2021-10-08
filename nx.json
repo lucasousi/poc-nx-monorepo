@@ -31,7 +31,8 @@
       "tags": []
     },
     "frontend-a": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["frontend-a-home-page"]
     },
     "frontend-a-components-private-button": {
       "tags": []
@@ -41,14 +42,21 @@
       "implicitDependencies": ["frontend-a"]
     },
     "frontend-a-home-page": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["frontend-a-components-private-button"]
     },
     "frontend-b": {
+      "tags": []
+    },
+    "frontend-b-components-private-button": {
       "tags": []
     },
     "frontend-b-e2e": {
       "tags": [],
       "implicitDependencies": ["frontend-b"]
+    },
+    "frontend-b-routes-home-page": {
+      "tags": []
     },
     "shared-components-shared-button": {
       "tags": []
