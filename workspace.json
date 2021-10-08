@@ -229,6 +229,31 @@
         }
       }
     },
+    "frontend-a-services": {
+      "projectType": "library",
+      "root": "libs/frontend-a/services",
+      "sourceRoot": "libs/frontend-a/services/src",
+      "prefix": "poc-nx-monorepo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend-a/services"],
+          "options": {
+            "jestConfig": "libs/frontend-a/services/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend-a/services/src/**/*.ts",
+              "libs/frontend-a/services/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend-b": {
       "root": "apps/frontend-b",
       "sourceRoot": "apps/frontend-b/src",

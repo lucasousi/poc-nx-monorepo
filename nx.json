@@ -45,6 +45,9 @@
       "tags": [],
       "implicitDependencies": ["frontend-a-components-private-button"]
     },
+    "frontend-a-services": {
+      "tags": []
+    },
     "frontend-b": {
       "tags": []
     },

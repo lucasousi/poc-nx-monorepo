@@ -18,6 +18,9 @@
       "@primavera/frontend-a/routes/home-page": [
         "libs/frontend-a/routes/home-page/src/index.ts"
       ],
+      "@primavera/frontend-a/services": [
+        "libs/frontend-a/services/src/index.ts"
+      ],
       "@primavera/frontend-b/routes/home-page": [
         "libs/frontend-b/routes/home-page/src/index.ts"
       ],
