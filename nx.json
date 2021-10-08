@@ -1,0 +1,51 @@
+{
+  "npmScope": "poc-nx-monorepo",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".eslintrc.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/workspace/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build", "lint", "test", "e2e"]
+      }
+    }
+  },
+  "targetDependencies": {
+    "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ]
+  },
+  "projects": {
+    "backend-a": {
+      "tags": []
+    },
+    "frontend-a": {
+      "tags": []
+    },
+    "frontend-a-e2e": {
+      "tags": [],
+      "implicitDependencies": ["frontend-a"]
+    },
+    "frontend-a-home-page": {
+      "tags": []
+    },
+    "frontend-b": {
+      "tags": []
+    },
+    "frontend-b-e2e": {
+      "tags": [],
+      "implicitDependencies": ["frontend-b"]
+    }
+  }
+}
