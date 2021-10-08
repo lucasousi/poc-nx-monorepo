@@ -123,6 +123,8 @@
           },
           "defaultConfiguration": "development",
           "options": {
+            "open": true,
+            "port": 4200,
             "proxyConfig": "apps/frontend-a/proxy.conf.json"
           }
         },
@@ -278,7 +280,10 @@
           "builder": "@nrwl/web:dev-server",
           "options": {
             "buildTarget": "frontend-b:build",
-            "hmr": true
+            "hmr": false,
+            "liveReload": true,
+            "open": true,
+            "port": 4201
           },
           "configurations": {
             "production": {
