@@ -58,6 +58,16 @@
     "frontend-b-routes-home-page": {
       "tags": []
     },
+    "mfe-host-app": {
+      "tags": []
+    },
+    "mfe-host-app-e2e": {
+      "tags": [],
+      "implicitDependencies": ["mfe-host-app"]
+    },
+    "mfe-remote-app": {
+      "tags": []
+    },
     "shared-components-shared-button": {
       "tags": []
     }
