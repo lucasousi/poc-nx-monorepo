@@ -15,8 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@primavera/frontend-a/home-page": [
-        "libs/frontend-a/home-page/src/index.ts"
+      "@primavera/frontend-a/routes/home-page": [
+        "libs/frontend-a/routes/home-page/src/index.ts"
+      ],
+      "@primavera/frontend-a/components/private-button": [
+        "libs/frontend-a/components/private-button/src/index.ts"
+      ],
+      "@primavera/shared/components/shared-button": [
+        "libs/shared/components/shared-button/src/index.ts"
       ]
     }
   },

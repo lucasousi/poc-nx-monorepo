@@ -33,6 +33,9 @@
     "frontend-a": {
       "tags": []
     },
+    "frontend-a-components-private-button": {
+      "tags": []
+    },
     "frontend-a-e2e": {
       "tags": [],
       "implicitDependencies": ["frontend-a"]
@@ -46,6 +49,9 @@
     "frontend-b-e2e": {
       "tags": [],
       "implicitDependencies": ["frontend-b"]
+    },
+    "shared-components-shared-button": {
+      "tags": []
     }
   }
 }

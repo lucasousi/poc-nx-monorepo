@@ -151,6 +151,31 @@
         }
       }
     },
+    "frontend-a-components-private-button": {
+      "projectType": "library",
+      "root": "libs/frontend-a/components/private-button",
+      "sourceRoot": "libs/frontend-a/components/private-button/src",
+      "prefix": "poc-nx-monorepo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/frontend-a/components/private-button"],
+          "options": {
+            "jestConfig": "libs/frontend-a/components/private-button/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/frontend-a/components/private-button/src/**/*.ts",
+              "libs/frontend-a/components/private-button/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "frontend-a-e2e": {
       "root": "apps/frontend-a-e2e",
       "sourceRoot": "apps/frontend-a-e2e/src",
@@ -301,6 +326,28 @@
           "outputs": ["{options.outputFile}"],
           "options": {
             "lintFilePatterns": ["apps/frontend-b-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "shared-components-shared-button": {
+      "root": "libs/shared/components/shared-button",
+      "sourceRoot": "libs/shared/components/shared-button/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/shared/components/shared-button/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/components/shared-button"],
+          "options": {
+            "jestConfig": "libs/shared/components/shared-button/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

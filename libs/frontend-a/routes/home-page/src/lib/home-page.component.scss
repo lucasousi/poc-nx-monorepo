@@ -1,0 +1,22 @@
+.home-page {
+  min-height: 100vh;
+  &__box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    &--title {
+      color: #464646;
+      font-weight: 600;
+    }
+
+    &--subtitle {
+      border-bottom: 1px dashed #4646465d;
+    }
+
+    &--subtitle,
+    &--description {
+      color: #6c757d;
+    }
+  }
+}

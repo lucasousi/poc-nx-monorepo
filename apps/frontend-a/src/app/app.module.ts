@@ -20,7 +20,7 @@ import { CommonModule } from '@angular/common';
         {
           path: 'home-page',
           loadChildren: () =>
-            import('@primavera/frontend-a/home-page').then(
+            import('@primavera/frontend-a/routes/home-page').then(
               (module) => module.HomePageModule
             ),
         },
