@@ -27,9 +27,6 @@
     ]
   },
   "projects": {
-    "angular-mfe-host-app": {
-      "tags": []
-    },
     "backend-a": {
       "tags": []
     },
