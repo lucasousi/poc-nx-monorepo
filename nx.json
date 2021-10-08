@@ -59,7 +59,8 @@
       "tags": []
     },
     "mfe-host-app": {
-      "tags": []
+      "tags": [],
+      "implicitDependencies": ["mfe-remote-app"]
     },
     "mfe-host-app-e2e": {
       "tags": [],
