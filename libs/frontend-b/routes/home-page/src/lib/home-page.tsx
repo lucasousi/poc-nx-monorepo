@@ -1,7 +1,18 @@
 import './home-page.scss';
 import { PrivateButtonComponent } from '../../../../components/private-button/src';
+import { useEffect, useState } from 'react';
 
 export function HomePage() {
+  const [backendMessage, setBackendMessage] = useState('');
+
+  useEffect(() => {
+    fetch('http://localhost:3333/api')
+      .then<{ message: string }>((res) => res.json())
+      .then(({ message }) => {
+        setBackendMessage(message);
+      });
+  }, []);
+
   return (
     <div className="home-page row justify-content-center align-items-center">
       <div className="col-5">
@@ -24,6 +35,11 @@ export function HomePage() {
               demais projetos do monorepo, agnóstico a framework
             </p>
             <shared-button></shared-button>
+            {/* Resposta do Backend */}
+            <p className="home-page__box--description mt-4">
+              3. Este é o retorno do <strong>Backend</strong>:
+            </p>
+            <p>{backendMessage}</p>
           </div>
         </div>
       </div>

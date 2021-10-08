@@ -17,10 +17,10 @@ export class HomePageComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.getHelloWorld();
+    this.getBackendMessage();
   }
 
-  getHelloWorld() {
+  getBackendMessage() {
     const subscription = this.helloWorldService
       .getHelloWorld()
       .subscribe(({ message }) => {
